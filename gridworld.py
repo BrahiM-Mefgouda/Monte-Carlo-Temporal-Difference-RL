@@ -42,7 +42,7 @@ class GridWorld:
         #self.transition_array = np.ones(self.action_space_size) / self.action_space_size
         self.reward_matrix = np.zeros((tot_row, tot_col))
         self.state_matrix = np.zeros((tot_row, tot_col))
-        self.position = [np.random.randint(tot_row), np.random.randint(tot_col)]
+        self.position = [0, 0] #Brahim
 
     #def setTransitionArray(self, transition_array):
         #if(transition_array.shape != self.transition_array):
@@ -136,7 +136,7 @@ class GridWorld:
                 if(self.state_matrix[row, col] == 0): break
             self.position = [row, col]
         else:
-            self.position = [self.world_row-1, 0]
+            self.position = [0, 0] # Brahim
         #reward = self.reward_matrix[self.position[0], self.position[1]]
         return self.position
 
